@@ -29,7 +29,6 @@ public class DeleteServlet extends HttpServlet {
 		//generate the connection
 		try(Connection con = DriverManager.getConnection("jdbc:mysql:///empmgmt","root","sindhucherry@1");
 				PreparedStatement ps = con.prepareStatement(query);){
-			//set the values
 			ps.setInt(1, id);
 			//execute the query
 			int count = ps.executeUpdate();
